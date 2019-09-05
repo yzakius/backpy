@@ -1,4 +1,7 @@
 # Backpy
+
+[![Build Status](https://travis-ci.org/yzakius/backpy.svg?branch=master)](https://travis-ci.org/yzakius/backpy)
+
 *A simple backup tool written in python.*
 
 Backpy is just a exercise result of my python learning.

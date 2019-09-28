@@ -12,3 +12,8 @@ Currently I'm studying "os" module and my purpose is to write a simple backup sc
 
 - [ ] auto unmount after backup
 - [ ] show difference of space in disk after backup
+- [ ] use command line parameter
+- [ ] use a configuration file
+- [ ] inform when a destination is not found
+- [ ] when running script without source and target, suggest using last valid configuration
+- [ ] set list with pattern of files and directories to exclude from backup

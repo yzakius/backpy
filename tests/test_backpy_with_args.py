@@ -24,7 +24,7 @@ def test_is_file():
 
 
 def test_backup_with_equal_source_and_destination():
-    with pytest.raises(backpy_with_args.BackupWithEqualSourceAndDestination):
+    with pytest.raises(Exception):
         backpy_with_args.backup('/tmp/', '/tmp')
-    with pytest.raises(backpy_with_args.BackupWithEqualSourceAndDestination):
+    with pytest.raises(Exception):
         backpy_with_args.backup('/tmp', '/tmp/')

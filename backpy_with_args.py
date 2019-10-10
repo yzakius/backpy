@@ -47,7 +47,7 @@ def init():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=textwrap.dedent('''Example:
   python %(prog)s source ~/source1 destination ~/destination1/
-  
+
   Before executing the command:
   .
   ├── destination1

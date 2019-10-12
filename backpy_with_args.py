@@ -1,11 +1,8 @@
 import argparse
 import os
+import textwrap
 
 TEST_MODE = False
-
-
-class BackupWithEqualSourceAndDestination(Exception):
-    pass
 
 
 def is_directory(path: str) -> str:
@@ -34,7 +31,7 @@ def notify(message: str):
 
 def backup(source: str, destination: str, exclude_from: str = None):
     if os.path.abspath(source) == os.path.abspath(destination):
-        raise BackupWithEqualSourceAndDestination(f'Source and destination are equal: {source}')
+        raise Exception(f'Source and destination are equal: {source}')
 
     backup_cmd = f'rsync -azvP --delete {source} {destination}'
     if exclude_from:
@@ -45,11 +42,28 @@ def backup(source: str, destination: str, exclude_from: str = None):
 
 
 def init():
-    parser = argparse.ArgumentParser(description='A simple backup tool written in python.')
-    parser.add_argument('--source', dest='sources', type=is_directory, metavar='DIR', nargs='+', required=True,
-                        help='Source directories.')
-    parser.add_argument('--destination', dest='destinations', type=is_writable_directory, metavar='DIR', nargs='+',
-                        required=True,
+    parser = argparse.ArgumentParser(
+        description='A simple backup tool written in python.',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=textwrap.dedent('''Example:
+  python %(prog)s source ~/source1 destination ~/destination1/
+
+  Before executing the command:
+  .
+  ├── destination1
+  └── source1
+      └── file1
+
+  After:
+  .
+  ├── destination1
+  │   └── source1
+  │       └── file1
+  └── source1
+      └── file1''')
+    )
+    parser.add_argument('sources', type=is_directory, metavar='DIR', nargs='+', help='Source directories.')
+    parser.add_argument('destinations', type=is_writable_directory, metavar='DIR', nargs='+',
                         help='Destination directories.')
     parser.add_argument('--exclude-from', dest='exclude_from', type=is_file, metavar='FILE',
                         help='File with pattern of files and directories to exclude.')

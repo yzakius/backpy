@@ -1,6 +1,7 @@
 import pytest
-import backpy_with_args
 from argparse import ArgumentTypeError
+
+import backpy_with_args
 
 backpy_with_args.TEST_MODE = True
 

@@ -1,1 +1,8 @@
 .venv
+todo.md
+
+# Python
+.pytest_cache/
+.python-version
+__pycache__/
+tests/__pycache__/

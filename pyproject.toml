@@ -9,6 +9,7 @@ python = "^3.8"
 pytest = "^5.4.1"
 flake8 = "^3.7.9"
 black = "^19.10b0"
+python-decouple = "^3.3"
 
 [tool.poetry.dev-dependencies]
 autopep8 = "^1.5.1"

@@ -1,8 +1,9 @@
 import os
 import shutil
+from decouple import config
 
-dest = "/run/media/yzakius/backup/backup/yzakius/"
-source = "/home/yzakius/"
+dest = config("dest")
+source = config("source")
 
 
 def message(begin_space, end_space):

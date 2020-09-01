@@ -21,7 +21,7 @@ def message(begin_space, end_space):
 def backup(source, dest):
     if os.path.exists(dest):
         begin_space = diff_space(dest)
-        os.system(f"rsync -azvP --delete {source} {dest}")
+        os.system(f"sudo rsync -azvP --progress --delete {source} {dest}")
         end_space = diff_space(dest)
         return message(begin_space, end_space)
     else:
@@ -35,4 +35,4 @@ def diff_space(dest):
     return usage, free
 
 
-backup(source, dest)
+print(backup(source, dest))

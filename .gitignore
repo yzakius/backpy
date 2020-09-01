@@ -1,9 +1,14 @@
 .venv
 todo.md
 .env
+backpy.egg-info/
 
 # Python
 .pytest_cache/
 .python-version
 __pycache__/
 tests/__pycache__/
+
+# ides
+.idea
+.vscode

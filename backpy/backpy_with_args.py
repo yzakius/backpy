@@ -5,7 +5,7 @@ import textwrap
 TEST_MODE = False
 
 
-def is_directory(path: str) -> str:
+    def is_directory(path: str) -> str:
     if os.path.isdir(path):
         return path
     else:

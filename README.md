@@ -6,9 +6,5 @@
 
 Backpy is just a exercise result of my python learning.
 
-Currently I'm studying "os" module and my purpose is to write a simple backup script.
+Currently I'm studying "os" module and my purpose is to write a simple script using rsync to sync my laptop hd with a external hd.
 
-### Roadmap
-
-- [ ] auto unmount after backup
-- [ ] show difference of space in disk after backup

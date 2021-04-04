@@ -28,7 +28,7 @@ def test_if_sync_works():
     dest = "./dest/"
     backup(source, dest)
     for i in range(10):
-        assert os.path.exists(f"./dest/file{i}.txt") == True
+        assert os.path.exists(f"./dest/file{i}.txt")
 
 
 @pytest.mark.usefixtures("cleandir")

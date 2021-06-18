@@ -1,0 +1,4 @@
+.cache
+.var
+.local
+.mozilla

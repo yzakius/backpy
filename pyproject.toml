@@ -7,7 +7,7 @@ authors = ["Isaac Ferreira Filho"]
 [tool.poetry.dependencies]
 python = "^3.8"
 pytest = "^5.4.1"
-black = "^19.10b0"
+black = "^24.3"
 python-decouple = "^3.4"
 
 [tool.poetry.dev-dependencies]
